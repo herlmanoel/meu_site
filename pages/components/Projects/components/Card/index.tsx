@@ -1,15 +1,19 @@
 import Image from "next/image";
 
-export const Card = ({ titulo, descricao, tecnologias }) => {
+export const Card = ({ titulo, descricao, tecnologias, img }) => {
+    
+    descricao = descricao.substring(0, 134) + "...";
+
     return (<div key={1} className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
     <article className="overflow-hidden rounded-lg shadow-lg">
-        <a href="#">
+        <div className="img-card overflow-hidden">
             {/* <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random"> */}
-        </a>
-        <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-            <h1 className="text-lg">
+                <Image  objectFit="cover" className="block h-auto w-full" src={img} />
+        </div>
+        <header className="tamanho-titulo-card flex items-center justify-between leading-tight p-2 md:p-4 ">
+            <h1 className="text-lg ">
                 <a className="no-underline hover:underline text-black" href="#">
-                    {titulo}
+                    {titulo}               
                 </a>
             </h1>
             {/* <p className="text-grey-darker text-sm">

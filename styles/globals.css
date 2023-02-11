@@ -292,3 +292,39 @@ a {
 	color: var(--primary-clr);
 	transform: translateY(-3px);
 }
+
+.tamanho-titulo-card {
+	display: flex;
+	align-items: center;
+	min-height: 80px;
+}
+
+.img-card {
+	height: 150px !important;
+}
+
+.container-about-me {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.div-texto-about-me {
+	max-width: 60%;
+}
+
+@media (max-width: 1108px) {
+    .container-about-me {
+		margin-top: -10rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 4rem;
+	}
+
+	.div-texto-about-me {
+		max-width: 90%;
+	}
+} 

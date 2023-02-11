@@ -29,15 +29,15 @@ export const AboutMe = ({ info }) => {
             </section>
             
             <section id='sectionAbout' className="mb-48">
-                <div className="w-full flex gap-6">
-                    <div className="w-1/3 flex items-center max-h-full">
+                <div className="w-full container-about-me "> {/* gap-6 */}
+                    <div className="">
                         <div className='flex-1'>
                             <div className="bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden">
                                 <Image src={perfilImg} layout="fill" objectFit="cover" />
                             </div>
                         </div>
                     </div>
-                    <div className="w-1/2 flex justify-between items-center max-h-full">
+                    <div className="div-texto-about-me">
                         <div className='flex-1'>
                         <h3 className="text-3xl dark:text-white ">Olá, meu nome é <br /> <strong>Herlmanoel</strong>,</h3>
                         <br />
