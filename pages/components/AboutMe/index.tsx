@@ -7,6 +7,9 @@ import {
 
 import perfilImg from "../../../public/perfil.jpg";
 import Image from "next/image";
+import { Title } from './components/Title';
+import { Subtitle } from './components/Subtitle';
+
 
 export const AboutMe = ({ info }) => {
     return (
@@ -14,12 +17,10 @@ export const AboutMe = ({ info }) => {
 
             <section id='sectionHome' className="min-h-screen flex justify-center">
                 <div className="text-center flex flex-col justify-center">
-                    <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
-                        {info.nome}
-                    </h2>
-                    <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
+                    <Title>{info.nome}</Title>
+                    <Subtitle>
                         {info.subtitulo}
-                    </h3>
+                    </Subtitle>
                     <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
                         <AiFillTwitterCircle />
                         <AiFillLinkedin />
