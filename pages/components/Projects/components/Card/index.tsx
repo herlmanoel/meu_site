@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Modal } from '../modal';
 
 export const Card = ({ titulo, descricao, tecnologias, img }) => {
     
@@ -28,7 +29,8 @@ export const Card = ({ titulo, descricao, tecnologias, img }) => {
                 </p>
             </a>
         </main>
-        <footer className="px-6 pt-4 pb-2">                            
+        <footer className="px-6 pt-4 pb-2">    
+                                    
             <div>
                 {tecnologias.map(tec => {
                     return (<span key={8} className="inline-block bg-teal-500 rounded-full px-3 py-1 text-sm font-semibold text-gray-100 mr-2 mb-2 cursor-pointer hover:bg-teal-600 transition delay-50 duration-300 ease-in-out">{tec}</span>)

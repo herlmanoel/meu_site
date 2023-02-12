@@ -8,8 +8,14 @@ import { Projects } from "./components/Projects";
 import { Resume } from "./components/Resume";
 import { Menu } from "./components/Menu";
 
+export type Info = {
+  tituloOfPage: string;
+  nome: string;
+  subtitulo: string;
+  biografia: string;
+};
 
-export const info = {
+export const info: Info = {
   tituloOfPage: 'Herlmanoel',
   nome: 'Herlmanoel Fernandes Barbosa',
   subtitulo: 'Desenvolvedor Back-end Java, Spring Boot, Oracle PL/SQL | Desenvolvedor Front-end React',

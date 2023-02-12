@@ -9,9 +9,13 @@ import perfilImg from "../../../public/perfil.jpg";
 import Image from "next/image";
 import { Title } from './components/Title';
 import { Subtitle } from './components/Subtitle';
+import { Info } from '../../index';
 
+type AboutMeProps = {
+    info: Info;
+}
 
-export const AboutMe = ({ info }) => {
+export const AboutMe = ({  info }: AboutMeProps) => {
     return (
         <>
 
