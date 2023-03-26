@@ -1,7 +1,7 @@
 import { AiFillLinkedin, AiFillTwitterCircle, AiFillYoutube } from "react-icons/ai";
+import { Info } from '../../pages';
 import { Subtitle } from "./components/Subtitle";
 import { Title } from "./components/Title";
-import { Info } from "../../index";
 
 type AboutMeProps = {
     info: Info;

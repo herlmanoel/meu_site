@@ -1,6 +1,7 @@
-﻿import perfilImg from "../../../public/perfil.jpg";
+﻿import perfilImg from "../../public/perfil.jpg";
 import Image from "next/image";
-import { Info } from "../../index";
+import { Info } from '../../pages';
+
 
 type AboutMeProps = {
     info: Info;

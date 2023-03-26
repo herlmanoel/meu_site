@@ -1,10 +1,11 @@
 import { Card } from './components/Card';
 
-import ecoletaImg from "../../../public/ecoleta-img.png";
-import concordoImg from "../../../public/concordoImg.jpg";
-import corridaImg from "../../../public/corridaImg.jpg";
-import concorrenciaImg from "../../../public/concorrenciaImg.jpg";
-import programmingImg from "../../../public/programmingImg.png";
+import ecoletaImg from "../../public/ecoleta-img.png";
+import concordoImg from "../../public/concordoImg.jpg";
+import corridaImg from "../../public/corridaImg.jpg";
+import concorrenciaImg from "../../public/concorrenciaImg.jpg";
+import programmingImg from "../../public/programmingImg.png";
+
 const projetos = [
     {
         titulo: 'Simulação Epidemiológica',

@@ -2,13 +2,13 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 
 
-import { HeadNext } from "./components/HeadNext";
-import { Main } from "./components/Main";
-import { AboutMe } from "./components/AboutMe";
-import { Projects } from "./components/Projects";
-import { Resume } from "./components/Resume";
-import { Menu } from "./components/Menu";
-import { Header } from './components/Header';
+import { HeadNext } from "../components/HeadNext";
+import { Main } from "../components/Main";
+import { AboutMe } from "../components/AboutMe";
+import { Projects } from "../components/Projects";
+import { Resume } from "../components/Resume";
+import { Menu } from "../components/Menu";
+import { Header } from '../components/Header';
 
 export type Info = {
   tituloOfPage: string;
