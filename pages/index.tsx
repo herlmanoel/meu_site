@@ -33,7 +33,6 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Menu />
-      <HeadNext tituloOfPage={info.tituloOfPage} />
       <Main>
         <Header info={info} />
         <AboutMe info={info} />
@@ -44,4 +43,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Home;
