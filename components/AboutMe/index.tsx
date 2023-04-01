@@ -7,9 +7,17 @@ type AboutMeProps = {
     info: Info;
 }
 
+import styled from 'styled-components';
+
+const Section = styled.section`
+    display: flex;
+    justify-content: center;
+    margin: 20% 0;
+`;
+
 export const AboutMe = ({ info }: AboutMeProps) => {
     return (
-        <section id="sectionAbout" className="min-h-screen flex justify-center">
+        <Section id="sectionAbout" >
             <div className="w-full container-about-me">
                 <div>
                     <div className="flex-1">
@@ -28,6 +36,6 @@ export const AboutMe = ({ info }: AboutMeProps) => {
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
     );
 }
