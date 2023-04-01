@@ -1,19 +1,36 @@
+import React, { useState } from 'react';
+import { AiOutlineBars, AiOutlineClose } from 'react-icons/ai';
+
 export const Menu = () => {
-    return (<nav className="primaryMenu stickyMenuBar bg-white ">
-        <div className="logo">
-            <strong>Dev</strong>
-        </div>
-        <ul>
-            <li><a href="#sectionHome">Home</a></li>
-            <li><a href="#sectionAbout">Sobre mim</a></li>
-            <li><a href="#sectionExperiencias">Experiência</a></li>
-            <li><a href="#sectionEducacao">Formação</a></li>
-            <li><a href="#sectionPortfolio">Projetos</a></li>
-        </ul>
-        <div id="primaryMenuBtn">
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
-        </div>
-    </nav>);
-}
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const handleMenuClick = () => {
+        setMenuOpen(!menuOpen);
+    };
+
+    const menuItems = [
+        { label: 'Home', href: '#sectionHome' },
+        { label: 'Sobre mim', href: '#sectionAbout' },
+        { label: 'Experiência', href: '#sectionExperiencias' },
+        { label: 'Formação', href: '#sectionEducacao' },
+        { label: 'Projetos', href: '#sectionPortfolio' },
+    ];
+
+    return (
+        <nav className="primaryMenu stickyMenuBar bg-white">
+            <div className="logo">
+                <strong>Dev</strong>
+            </div>
+            <ul className={`menu ${menuOpen ? 'open' : ''}`}>
+                {menuItems.map((item) => (
+                    <li key={item.href}>
+                        <a href={item.href}>{item.label}</a>
+                    </li>
+                ))}
+            </ul>
+            <button className="button-menu-open-close" onClick={handleMenuClick}>
+                {menuOpen ? <AiOutlineClose /> : <AiOutlineBars />}
+            </button>
+        </nav>
+    );
+};
