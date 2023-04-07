@@ -307,6 +307,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  margin-bottom: 8rem;
 }
 
 .div-texto-about-me {
@@ -394,3 +395,82 @@ a {
 .primaryMenu button span:last-child {
   margin-bottom: 0;
 }
+.card-project-article {
+  
+}
+
+.card-project-article:hover .card-project-body {
+  /* cursor: pointer; */
+  opacity: 0.3;
+}
+
+.button-card-project-open-modal {
+  display: none;
+}
+
+.button-card-project-open-modal button {
+  cursor: pointer;
+}
+
+.card-div:hover .button-card-project-open-modal,
+.button-card-project-open-modal:hover {
+  display: block !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(20 184 166 / var(--tw-bg-opacity));
+  border-radius: 8px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  z-index: 9999;
+}
+
+
+.card-div {
+  position: relative !important;
+}
+
+.react-modal-overlay {
+  background: rgba(0,0,0,0.5);
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.react-modal-content {
+  width: 100%;
+  max-width: 80rem;
+  background: #FFF;
+  padding: 3rem;
+  position: relative;
+  border-radius: 10px;
+  overflow:auto; 
+}
+
+
+
+.react-modal-close {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  border: 0;
+  background: transparent;
+
+ transition: filter 0.2s;
+}
+
+/* POST */

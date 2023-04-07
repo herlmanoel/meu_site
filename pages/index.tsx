@@ -1,8 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-
-import { HeadNext } from "../components/HeadNext";
 import { Main } from "../components/Main";
 import { AboutMe } from "../components/AboutMe";
 import { Projects } from "../components/Projects";
@@ -25,6 +23,7 @@ export const info: Info = {
 };
 
 const Home: NextPage = () => {
+
   return (
     <div className="home-content-center">
       <Head>

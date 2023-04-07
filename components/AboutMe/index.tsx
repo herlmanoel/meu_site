@@ -2,12 +2,12 @@
 import Image from "next/image";
 import { Info } from '../../pages';
 
+import styled from 'styled-components';
 
 type AboutMeProps = {
     info: Info;
 }
 
-import styled from 'styled-components';
 
 const Section = styled.section`
     display: flex;
