@@ -12,10 +12,10 @@ export const Header = ({ info }: AboutMeProps) => {
         <div className="text-center flex flex-col justify-center">
             <Title>{info.nome}</Title>
             <Subtitle>{info.subtitulo}</Subtitle>
-            <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-                <AiFillTwitterCircle />
-                <AiFillLinkedin />
-                <AiFillYoutube />
+            <div className="text-5xl flex justify-center gap-6 py-3 text-gray-600 dark:text-gray-400">
+                <a href="https://www.linkedin.com/in/herlmanoel/" target="_blank" rel="noopener noreferrer">
+                    <AiFillLinkedin />
+                </a>
             </div>
         </div>
     </section>);
