@@ -336,6 +336,23 @@ a {
 .button-menu-open-close {
   display: none;
 }
+@media (max-width: 519px) {
+  .img-perfil {
+    width: 80%;
+    height: 80%;
+    margin-top: 5rem;
+  }
+  .flex-img-perfil {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.flex-img-perfil {
+  flex: 1 1 0%;
+}
 
 @media (max-width: 768px) {
   .button-menu-open-close {
@@ -474,3 +491,4 @@ a {
 }
 
 /* POST */
+

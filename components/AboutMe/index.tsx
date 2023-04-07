@@ -20,9 +20,16 @@ export const AboutMe = ({ info }: AboutMeProps) => {
         <Section id="sectionAbout" >
             <div className="w-full container-about-me">
                 <div>
-                    <div className="flex-1">
-                        <div className="bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden">
-                            <Image src={perfilImg} layout="fill" objectFit="cover" alt="Descrição da imagem" />
+                    <div className="flex-img-perfil">
+                        <div className="
+                            img-perfil
+                            bg-gradient-to-b 
+                            from-teal-500 
+                            w-80 h-80 
+                            rounded-full  
+                            overflow-hidden"
+                        >
+                            <Image src={perfilImg} objectFit="cover" alt="Descrição da imagem" />
                         </div>
                     </div>
                 </div>
