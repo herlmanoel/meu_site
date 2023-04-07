@@ -1,4 +1,4 @@
-import { AiFillLinkedin, AiFillTwitterCircle, AiFillYoutube } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
 import { Info } from '../../pages';
 import { Subtitle } from "./components/Subtitle";
 import { Title } from "./components/Title";

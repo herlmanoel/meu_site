@@ -1,7 +1,7 @@
-const experiences = [
+let experiences = [
     {
-        anoInicio: "NOV/2020",
-        anoFim: "JUN/2021",
+        anoInicio: new Date(2020, 10, 1),
+        anoFim: new Date(2021, 5, 1),
         funcao: "Bolsista de Iniciação Científica",
         empresa: "Instituto Metrópole Digital - IMD/UFRN",
         descricao: `Projeto de Pesquisa da Universidade Federal do Rio Grande do Norte, no laboratório de Inovação Tecnológica em Saúde.
@@ -14,16 +14,16 @@ const experiences = [
         ]
     },
     {
-        anoInicio: "JUL/2021",
-        anoFim: "ABR/2022",
+        anoInicio: new Date(2021, 6, 1),
+        anoFim: new Date(2022, 3, 1),
         funcao: "Desenvolvedor Full Stack",
         empresa: "Leve Tecnologia",
         descricao: `Atuando no desenvolvimento de E-commerces para operadoras de plano de saúde, implantando e mantendo sistemas.`,
         items: []
     },
     {
-        anoInicio: "MAI/2022",
-        anoFim: "",
+        anoInicio: new Date(2022, 4, 1),
+        anoFim: null,
         funcao: "Desenvolvedor de software",
         empresa: "LIAX TI",
         descricao: `[Alocado na OdontoPrev]
@@ -56,6 +56,32 @@ const education = [
 ];
 
 export const Resume = () => {
+    function getDateFormat(date: Date | null) {
+        if(date === null) {
+            return 'Atualmente';
+        }
+        const month = date.toLocaleString('pt-BR', { month: 'short' }).toUpperCase();
+        const year = date.getFullYear();
+        return `${month}/${year}`;
+    }
+
+    experiences = experiences.sort((a,b) => b.anoInicio.getTime() - a.anoInicio.getTime());
+
+    function monthsBetween(date1: Date, date2: Date | null) {
+        if(date2 ==null ) {
+            date2 = new Date();
+        }
+        const d1 = new Date(date1);
+        const d2 = new Date(date2);
+        let months = (d2.getFullYear() - d1.getFullYear()) * 12;
+        months -= d1.getMonth();
+        months += d2.getMonth();
+        if (d2.getDate() < d1.getDate()) {
+            months--;
+        }
+        return months + 1;
+    }
+
     return (
         <>
             <section id="sectionResume">
@@ -67,7 +93,8 @@ export const Resume = () => {
                                 {experiences.map(item => {
                                     return (
                                         <div className="box" key={item.funcao}>
-                                            <h4 className="py-2 text-teal-600 dark:text-teal-400">{item.anoInicio} - {item.anoFim}</h4>
+                                            <h4 className="py-2 text-teal-600 dark:text-teal-400"> {getDateFormat(item.anoInicio)}
+                                             - {getDateFormat(item.anoFim)} · {monthsBetween(item.anoInicio, item.anoFim)} meses </h4>
                                             <h3> <strong>{item.funcao}</strong> - {item.empresa}</h3>
                                             <p>{item.descricao}</p>
                                             {item.items.map(i =>
