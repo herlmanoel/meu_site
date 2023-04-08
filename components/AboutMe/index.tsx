@@ -1,48 +1,41 @@
 ﻿import perfilImg from "../../public/perfil.jpg";
 import Image from "next/image";
 import { Info } from '../../pages';
-
-import styled from 'styled-components';
+import {
+    Section,
+    Container,
+    ProfileImage,
+    ProfileImageContainer,
+    TextContainer,
+    Heading,
+    Paragraph
+} from './styles';
 
 type AboutMeProps = {
     info: Info;
 }
 
-
-const Section = styled.section`
-    display: flex;
-    justify-content: center;
-    margin: 20% 0;
-`;
-
 export const AboutMe = ({ info }: AboutMeProps) => {
     return (
-        <Section id="sectionAbout" >
-            <div className="w-full container-about-me">
+        <Section id="sectionAbout">
+            <Container className="container-about-me">
                 <div>
-                    <div className="flex-img-perfil">
-                        <div className="
-                            img-perfil
-                            bg-gradient-to-b 
-                            from-teal-500 
-                            w-80 h-80 
-                            rounded-full  
-                            overflow-hidden"
-                        >
-                            <Image src={perfilImg} objectFit="cover" alt="Descrição da imagem" />
-                        </div>
-                    </div>
+                    <ProfileImageContainer className="flex-img-perfil">
+                        <ProfileImage>
+                            <Image src={perfilImg} objectFit="cover" alt="Profile image" />
+                        </ProfileImage>
+                    </ProfileImageContainer>
                 </div>
                 <div className="div-texto-about-me">
-                    <div className="flex-1">
-                        <h3 className="text-3xl dark:text-white ">Olá, meu nome é <br /> <strong>Herlmanoel</strong>,</h3>
+                    <TextContainer>
+                        <Heading>Olá, meu nome é <br /><strong>Herlmanoel</strong>,</Heading>
                         <br />
-                        <p className="text-sm leading-8 text-gray-800 dark:text-gray-200  md:text-xl">
+                        <Paragraph>
                             {info.biografia}
-                        </p>
-                    </div>
+                        </Paragraph>
+                    </TextContainer>
                 </div>
-            </div>
+            </Container>
         </Section>
     );
 }

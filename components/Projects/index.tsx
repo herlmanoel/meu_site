@@ -1,8 +1,5 @@
 import { Card } from './components/Card';
-
-
-import {projetos} from './data/projects';
-
+import { projetos } from './data/projects';
 
 export const Projects = () => {
     return (<section id="sectionPortfolio" className="mb-2">
